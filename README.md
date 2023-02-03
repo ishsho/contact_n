@@ -1,4 +1,78 @@
+# アプリケーション名
+ContactNote
+</br>
+</br>
 
+# アプリケーション概要
+社内の伝達事項を、円滑にわかりやすく行えるアプリケーション。
+</br>
+</br>
+
+# URL
+
+</br>
+</br>
+
+# テスト用アカウント
+・ Basic認証ID : ishsho  
+・ Basic認証パスワード : 1203  
+・ メールアドレス : test@test
+・ パスワード : 111111
+</br>
+</br>
+
+# 利用方法
+トピックス投稿
+---
+___
+1.URLに遷移するとログイン画面が表示される。  
+2.
+</br>
+</br>
+
+項目投稿
+---
+___
+1.  
+2. 
+3.  
+</br>
+</br>
+
+# アプリケーションを作成した背景
+
+</br>
+</br>
+
+# 洗い出した要件
+[要件を定義したシート](https://docs.google.com/spreadsheets/d/1hPcdfzZ0Nhv3sjtiWoG7QFnbUg65fBB31BzNE2ETZWc/edit#gid=982722306)
+</br>
+</br>
+
+# 実装した機能についての画像やGIFおよびその説明
+
+</br>
+</br>
+
+# 実装予定の機能
+
+</br>
+</br>
+
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/134312440084ed9299ce800c3daabdf3.png)](https://gyazo.com/134312440084ed9299ce800c3daabdf3)
+</br>
+</br>
+
+# 開発環境
+
+</br>
+</br>
+
+# 工夫したポイント
+
+</br>
+</br>
 
 # テーブル設計
 
