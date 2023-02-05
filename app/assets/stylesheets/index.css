@@ -8,11 +8,38 @@
 *************************************************************************/
 
 .header{
-  height: 80px;
+  height: 170px;
   width: 100vw;
-  background-color: rgba(29, 112, 66, 0.886);
+}
+
+.header-mains {
+  padding: 6px 50px;
+  margin: 5px;
+  border: 1px solid black;
 }
 
 .header-main {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-icon{
+  width: 10vw;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.chat{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 40px;
+}
+
+.logout{
+  text-decoration: none;
+  font-size: 20px;
 }
