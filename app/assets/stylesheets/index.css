@@ -8,12 +8,12 @@
 *************************************************************************/
 
 .header{
-  height: 170px;
+  height: 120px;
   width: 100vw;
 }
 
 .header-mains {
-  padding: 6px 50px;
+  padding: 6px 100px;
   margin: 5px;
   border: 1px solid black;
 }
@@ -25,7 +25,7 @@
 }
 
 .logo-icon{
-  width: 10vw;
+  width: 15vw;
 }
 
 .header-right {
@@ -37,9 +37,75 @@
   text-decoration: none;
   font-size: 30px;
   margin-right: 40px;
+  color: black;
 }
 
 .logout{
   text-decoration: none;
   font-size: 20px;
+  color: black;
 }
+
+
+/*************************************************************************
+新着情報
+*************************************************************************/
+.kensaku {
+  background-color: bisque;
+  margin-top: 30px;
+}
+
+.new-topics {
+  margin-top: 30px;
+  display: flex;
+}
+
+.left-pic {
+  height: 350px;
+  width: 380px;
+}
+
+.new-topic {
+  background-color: beige;
+  height: 350px;
+  width: calc(100vw - 760px);
+  margin-bottom: 30px;
+}
+
+.right-pic {
+  height: 350px;
+  width: 380px;
+}
+
+.upper-content{
+  
+}
+
+.heading-name {
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 1px solid red;
+  width: 200px;
+  margin: 40px auto;
+}
+
+.messages {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.message {
+  display: flex;
+  font-size: 18px;
+  margin: 0 0 16px 70px;
+}
+
+.message-date {
+  padding-right: 40px;
+}
+
+
+/*************************************************************************
+TOPIC
+*************************************************************************/
+
