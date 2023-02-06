@@ -53,11 +53,20 @@
   <div class="topic-lists">
     
     <ul class="topic-titles">
-       <li class="topic-title">01.社用車についてaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
-       <li class="topic-title">02.休暇申請について</li>
-       <li class="topic-title">01.社用車について</li>
-       <li class="topic-title">02.休暇申請について</li>
+      <% @topics.each do |topic| %>
+        <li class="topic-title"><%= topic.title_name %>
+          <span><%= image_tag 'arrow1.png' %></span>
+        </li>
+      <% end %>
     </ul>
+
+    <h3>投稿する</h3>
+      <%= form_with(model: @topic, local: true) do |form| %>
+        <%= form.text_field :title_name, placeholder: "HEADINGタイトル" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+
+
     
   </div>
 
