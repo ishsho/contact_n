@@ -53,11 +53,13 @@
   <div class="topic-lists">
     
     <ul class="topic-titles">
-       <li class="topic-title">01.社用車についてaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
-       <li class="topic-title">02.休暇申請について</li>
-       <li class="topic-title">01.社用車について</li>
-       <li class="topic-title">02.休暇申請について</li>
+      <% @topics.each do |topic| %>
+        <li class="topic-title"><%= topic.topic_title %></li>
+        <span><%= image_tag 'arrow.png' %></span>
+      <% end %>
     </ul>
+
+
     
   </div>
 
