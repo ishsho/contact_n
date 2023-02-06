@@ -14,16 +14,15 @@
     <header class="header">
 
       <div class="header-mains">
+
         <div class="header-main">
-
-          <div class="header-left">
-            <h1 class="header-name">ContactNote</h1>
+          <div class="logo">
+            <%= link_to image_tag("logo10.jpg", class:"logo-icon"), "/" %>
           </div>
-
-          <div class="header-right">
-            <%= link_to 'Chat', '#', class:"chat" %>
-            <div class="logout">ログアウト</div>
-          </div>
+          <ul class="header-right">
+            <li><%= link_to 'Chat', '#', class:"chat" %></li>
+            <li><%= link_to 'Logout', '#', class: "logout" %></li>
+          </ul>
 
         </div>
       </div>
@@ -31,5 +30,19 @@
     </header>
 
     <%= yield %>
+
+    <footer class="footer">
+  
+          <div class="footer-main">
+
+            <div class="footer-logo">
+              <%= link_to image_tag("logo10.jpg", class:"logo-icon"), "/" %>
+            </div>
+
+          </div>
+        </div>
+  
+    </footer>
+
   </body>
 </html>

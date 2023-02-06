@@ -2,17 +2,175 @@
   color: red;
 }
 
-
+.main-body {
+  width: 100vw;
+}
 /*************************************************************************
 ヘッダー
 *************************************************************************/
 
 .header{
-  height: 80px;
+  height: 120px;
   width: 100vw;
-  background-color: rgba(29, 112, 66, 0.886);
+}
+
+.header-mains {
+  padding: 6px 100px;
+  margin: 5px;
+  border: 1px solid black;
 }
 
 .header-main {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-icon{
+  width: 18vw;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.chat{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 40px;
+  color: black;
+}
+
+.logout{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+
+/*************************************************************************
+新着情報
+*************************************************************************/
+.kensaku {
+  background-color: bisque;
+  margin: 30px 0;
+}
+
+.new-topics {
+  margin-top: 30px;
+  display: flex;
+}
+
+.left-pic {
+  height: 350px;
+  width: 380px;
+}
+
+.new-topic {
+  height: 350px;
+  width: calc(100vw - 760px);
+  margin-bottom: 30px;
+  overflow: scroll;
+}
+
+.right-pic {
+  height: 350px;
+  width: 380px;
+}
+
+.heading-name {
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 1px solid red;
+  width: 200px;
+  margin: 40px auto;
+}
+
+.messages {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.message {
+  display: flex;
+  font-size: 18px;
+  margin: 0 0 16px 70px;
+}
+
+.message-date {
+  padding-right: 40px;
+}
+
+
+/*************************************************************************
+TOPIC
+*************************************************************************/
+.under-bar {
+  margin: 0 30px;
+  border: 0.5px solid black;
+}
+
+.topic-main {
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 40px;
+  border-bottom: 1px solid red;
+}
+
+
+
+/*************************************************************************
+TOPICリスト
+*************************************************************************/
+.topic-lists {
+  display: flex;
+  flex-direction: column;
+}
+
+.topic-titles {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.topic-titles>.topic-title {
+  width: calc(50% - 15px);
+  min-height: 60px;
+  background-color: rgb(230, 230, 207);
+  box-sizing: border-box;
+  font-size: 20px;
+  margin: 5px auto;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  line-height: 60px;
+  color: rgb(80, 50, 50);
+}
+
+
+/*************************************************************************
+フッター
+*************************************************************************/
+
+.footer{
+  margin-top: 200px;
+  height: 120px;
+  width: 100vw;
+}
+
+
+.footer-main {
+  padding: 6px 100px;
+  margin: 5px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-icon{
+  width: 18vw;
 }
