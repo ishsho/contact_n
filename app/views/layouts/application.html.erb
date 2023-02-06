@@ -17,11 +17,11 @@
 
         <div class="header-main">
           <div class="logo">
-            <%= link_to image_tag("logo9.jpg", class:"logo-icon"), "/" %>
+            <%= link_to image_tag("logo10.jpg", class:"logo-icon"), "/" %>
           </div>
           <ul class="header-right">
             <li><%= link_to 'Chat', '#', class:"chat" %></li>
-            <li><%= link_to 'logout', '#', class: "logout" %></li>
+            <li><%= link_to 'Logout', '#', class: "logout" %></li>
           </ul>
 
         </div>
@@ -30,5 +30,19 @@
     </header>
 
     <%= yield %>
+
+    <footer class="footer">
+  
+          <div class="footer-main">
+
+            <div class="footer-logo">
+              <%= link_to image_tag("logo10.jpg", class:"logo-icon"), "/" %>
+            </div>
+
+          </div>
+        </div>
+  
+    </footer>
+
   </body>
 </html>
