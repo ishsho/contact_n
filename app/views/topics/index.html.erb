@@ -54,10 +54,17 @@
     
     <ul class="topic-titles">
       <% @topics.each do |topic| %>
-        <li class="topic-title"><%= topic.topic_title %></li>
-        <span><%= image_tag 'arrow.png' %></span>
+        <li class="topic-title"><%= topic.title_name %>
+          <span><%= image_tag 'arrow1.png' %></span>
+        </li>
       <% end %>
     </ul>
+
+    <h3>投稿する</h3>
+      <%= form_with(model: @topic, local: true) do |form| %>
+        <%= form.text_field :title_name, placeholder: "HEADINGタイトル" %>
+        <%= form.submit "SEND" %>
+      <% end %>
 
 
     
