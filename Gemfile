@@ -61,3 +61,5 @@ end
 gem 'pry-rails'
 
 gem "net-http"
+
+gem 'devise'

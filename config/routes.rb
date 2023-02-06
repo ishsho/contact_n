@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'topics/index'
+  devise_for :users
   root to: 'topics#index'
   resources :topics, only: [:index]
 end
