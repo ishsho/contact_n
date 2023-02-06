@@ -20,8 +20,14 @@
             <%= link_to image_tag("logo10.jpg", class:"logo-icon"), "/" %>
           </div>
           <ul class="header-right">
-            <li><%= link_to 'Chat', '#', class:"chat" %></li>
-            <li><%= link_to 'Logout', '#', class: "logout" %></li>
+
+            <% if user_signed_in? %>
+              <li><%= link_to 'Chat', '#', class:"chat" %></li>
+              <li><%= link_to "ログアウト", '#', method: :delete, class:"logout" %></li>
+            <% else %>
+              <li><%= link_to 'ログイン', new_user_registration_path, class: "logout" %></li>
+            <% end %>
+
           </ul>
 
         </div>
