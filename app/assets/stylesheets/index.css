@@ -141,13 +141,22 @@ TOPICリスト
   width: calc(50% - 15px);
   min-height: 60px;
   background-color: rgb(230, 230, 207);
-  font-size: 20px;
+  font-size: 25px;
   margin: 5px auto;
   border: 0.5px solid black;
   border-radius: 5px;
   line-height: 60px;
   color: rgb(80, 50, 50);
+  position: relative;
 }
+
+.arrow-tag {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+
 
 
 /*************************************************************************

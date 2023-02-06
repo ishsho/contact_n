@@ -55,7 +55,7 @@
     <ul class="topic-titles">
       <% @topics.each do |topic| %>
         <li class="topic-title"><%= topic.title_name %>
-          <span><%= image_tag 'arrow1.png' %></span>
+          <span><%= image_tag('arrow1.png', class:"arrow-tag") %></span>
         </li>
       <% end %>
     </ul>
