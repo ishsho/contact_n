@@ -81,9 +81,9 @@
 
 .heading-name {
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
   border-bottom: 1px solid red;
-  width: 200px;
+  width: 150px;
   margin: 40px auto;
 }
 
@@ -162,12 +162,13 @@ TOPICリスト
 }
 
 .send-message {
-  width: 220px;
-  margin: 10px auto;
+  width: 247px;
+  margin: 10px auto 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
   border-bottom: 1px solid red;
   padding-top: 50px;
+
 }
 
 .send-forms {
@@ -178,12 +179,42 @@ TOPICリスト
 .send-form {
   height: 40px;
   width: 800px;
+  padding-left: 10px;
+  font-size: 20px;
 }
 
 .send-btn {
   height: 40px;
   width: 100px;
 }
+
+.error {
+  width: 250px;
+  margin: 10px auto;
+  color: red;
+  font-size: 20px;
+}
+
+.title-name {
+  text-decoration: none;
+  color: black;
+}
+
+/*************************************************************************
+editページ
+*************************************************************************/
+
+.edit {
+  width: 163px;
+  margin: 100px auto 20px;
+  font-size: 23px;
+  border-bottom: 1px solid red;
+}
+
+.edit-under {
+  height: 130px;
+}
+
 
 
 

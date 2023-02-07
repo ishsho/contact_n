@@ -6,6 +6,7 @@ class TopicsController < ApplicationController
   end
 
   def create
+    @topics = Topic.all
     @topic = Topic.new(topic_params)
     if @topic.save
       redirect_to root_path(anchor: 'lists')
@@ -13,6 +14,21 @@ class TopicsController < ApplicationController
       render :index
     end
   end
+
+  def edit
+    @topic = Topic.find(params[:id])
+  end
+
+  def update
+    @topic = Topic.find(params[:id])
+    if @topic.update(topic_params)
+      redirect_to root_path(anchor: 'lists')
+    else
+      render :edit
+    end
+
+  end
+
 
   private
 
