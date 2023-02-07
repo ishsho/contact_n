@@ -52,7 +52,7 @@
   <!--TOPICリスト-->
   <div class="topic-lists">
     
-    <ul class="topic-titles">
+    <ul class="topic-titles", id="list">
       <% @topics.each do |topic| %>
         <li class="topic-title"><%= topic.title_name %>
           <span><%= image_tag('arrow1.png', class:"arrow-tag") %></span>
@@ -60,11 +60,20 @@
       <% end %>
     </ul>
 
-    <h3>投稿する</h3>
-      <%= form_with(model: @topic, local: true) do |form| %>
-        <%= form.text_field :title_name, placeholder: "HEADINGタイトル" %>
-        <%= form.submit "SEND" %>
-      <% end %>
+ <!--Createフォーム-->
+ <div class="under-bar"></div>
+
+   <div class="sends">
+     <h3 class="send-message">New HEADING create</h3>
+        <%= form_with(model: @topic, local: true, id: "form") do |form| %>
+          <div class="send-forms">
+            <div>
+            <%= form.text_field :title_name,class:"send-form" %>
+            <%= form.submit "CREATE", class: "send-btn", id: "form" %>
+            </div>
+          </div>
+        <% end %>
+   </div>
 
 
     
