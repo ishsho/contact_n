@@ -8,9 +8,9 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
-      redirect_to root_path
+      redirect_to root_path(anchor: 'lists')
     else
-      render :new
+      render :index
     end
   end
 
