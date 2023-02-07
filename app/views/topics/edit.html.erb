@@ -1,0 +1,17 @@
+<div class="contents row">
+  <div class="container">
+    <h3 class="edit">編集または削除</h3>
+      <%= form_with(model: @topic, local: true) do |topic| %>
+
+        <div class="send-forms">
+          <div>
+            <%= topic.text_field :title_name,class:"send-form" %>
+            <%= topic.submit "編集", class: "send-btn", id: "submit" %>
+            <%= topic.submit "削除", class: "send-btn", id: "submit" %>
+          </div>
+        </div>
+
+      <% end %>
+      <div class="edit-under"></div>
+  </div>
+</div>
