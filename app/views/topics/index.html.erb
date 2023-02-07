@@ -46,7 +46,7 @@
   <!--TOPIC-->
   <div class="under-bar"></div>
   <div>
-    <h1 class="topic-main">HEADING</h1>
+    <h1 class="topic-main", id="lists">HEADING</h1>
   </div>
 
   <!--TOPICリスト-->
@@ -63,13 +63,13 @@
  <!--Createフォーム-->
  <div class="under-bar"></div>
 
-   <div class="sends">
+   <div class="sends", id="send">
      <h3 class="send-message">New HEADING create</h3>
         <%= form_with(model: @topic, local: true, id: "form") do |form| %>
           <div class="send-forms">
             <div>
             <%= form.text_field :title_name,class:"send-form" %>
-            <%= form.submit "CREATE", class: "send-btn", id: "form" %>
+            <%= form.submit "CREATE", class: "send-btn", id: "submit" %>
             </div>
           </div>
         <% end %>
