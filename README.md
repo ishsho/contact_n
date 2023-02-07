@@ -87,6 +87,7 @@ ___
 ### Association
 
 - has_many :topics
+- has_many :contents
 - has_many :room_users
 - has_many :rooms, through: :room_users
 - has_many :messages
@@ -116,6 +117,7 @@ ___
 
 ### Association
 
+- belongs_to : user
 - belongs_to : topic
 
 
