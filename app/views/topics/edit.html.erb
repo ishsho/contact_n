@@ -7,7 +7,7 @@
           <div>
             <%= topic.text_field :title_name,class:"send-form" %>
             <%= topic.submit "編集", class: "send-btn", id: "submit" %>
-            <%= topic.submit "削除", class: "send-btn", id: "submit" %>
+            <%= link_to "削除", topic_path, method: :delete, class:"topic-destroy" %>
           </div>
         </div>
 
