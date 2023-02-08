@@ -37,42 +37,41 @@
       <% @topics.each do |topic| %>
 
         <li class="topic-title">
-          <%= link_to edit_topic_path(topic.id), class:"title-name" do %>
+          <% if user_signed_in? && current_user.id == topic.user_id %>
+            <%= link_to edit_topic_path(topic.id), class:"title-name" do %>
+              <%= topic.title_name %>
+            <% end %>
+          <% else %>
             <%= topic.title_name %>
-            <span><%= image_tag('arrow1.png', class:"arrow-tag") %></span>
           <% end %>
+            <span><%= image_tag('arrow1.png', class:"arrow-tag") %></span>
         </li>
 
       <% end %>
 
     </ul>
 
- <!--Createフォーム-->
- <div class="under-bar"></div>
- 
+    <!--Createフォーム-->
+    <div class="under-bar"></div>
 
+    <div class="sends", id="send">
+      <h3 class="send-message">新しいHEADINGの作成</h3>
 
-   <div class="sends", id="send">
-     <h3 class="send-message">新しいHEADINGの作成</h3>
-        <%= form_with(model: @topic, local: true, id: "form") do |topic| %>
+          <%= form_with(model: @topic, local: true, id: "form") do |topic| %>
 
-          <div class="error">
-            <%= render 'shared/error_messages', model: topic.object %>
-          </div>
-
-          <div class="send-forms">
-            <div>
-              <%= topic.text_field :title_name,class:"send-form" %>
-              <%= topic.submit "作成", class: "send-btn", id: "submit" %>
+            <div class="error">
+              <%= render 'shared/error_messages', model: topic.object %>
             </div>
-          </div>
 
-        <% end %>
-   </div>
+            <div class="send-forms">
+              <div>
+                <%= topic.text_field :title_name,class:"send-form" %>
+                <%= topic.submit "作成", class: "send-btn", id: "submit" %>
+              </div>
+            </div>
 
+          <% end %>
+    </div>
 
-    
   </div>
-
-
 </div>
