@@ -186,6 +186,7 @@ TOPICリスト
 .send-btn {
   height: 40px;
   width: 100px;
+  cursor: pointer;
 }
 
 .error {
@@ -215,6 +216,18 @@ editページ
   height: 130px;
 }
 
+.topic-destroy {
+  background-color: #EFEFEF;
+  border: 1px solid #767676;
+  text-decoration: none;
+  color: black;
+  padding: 11px 32px;
+  border-radius: 3px;
+}
+
+.topic-destroy:hover {
+  background-color: #e9e8e8;
+}
 
 
 
