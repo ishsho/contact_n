@@ -1,77 +1,113 @@
 <div class="main-body">
-  <!--検索窓-->
-  <div class="kensaku">検索窓</div>
+  <% if user_signed_in? %>
+    <!--検索窓-->
+    <div class="form">
+      <form class="search-form" action="#">
+        <input class='input-box' placeholder='キーワードから探す'>
+        <button class="search-button">
+          <%= image_tag "search.png", class:"search-icon" %>
+        </button>
+      </form>
+    </div>
 
-  <!--新着情報-->
-  <div class="under-bar"></div>
-  <div class="new-topics">
-    <%= image_tag("logo5.jpg", class:"left-pic") %>
-    
-    <div class="new-topic">
-      <h2 class="heading-name">新着情報</h2>
+    <!--新着情報-->
+    <div class="under-bar"></div>
+    <div class="new-topics">
+      <%= image_tag("logo5.jpg", class:"left-pic") %>
+      
+      <div class="new-topic">
+        <h2 class="heading-name">新着情報</h2>
 
-      <ul class="messages">
-        <% @topics.each do |f| %>
-          <li class="message">
-            <div><%= f.title_name %></div>
+        <ul class="messages">
+          <% @topics.each do |f| %>
+            <li class="message">
+              <div><%= f.title_name %></div>
+            </li>
+          <% end %>
+
+        </ul>
+      </div>
+
+      <%= image_tag("logo5.jpg", class:"right-pic") %>
+    </div>
+
+    <!--TOPIC-->
+    <div class="under-bar"></div>
+    <div>
+      <h1 class="topic-main", id="lists">HEADING</h1>
+    </div>
+
+    <!--TOPICリスト-->
+    <div class="topic-lists">
+      
+      <ul class="topic-titles", id="list">
+
+        <% @topics.each do |topic| %>
+
+          <li class="topic-title">
+            <% if user_signed_in? && current_user.id == topic.user_id %>
+              <%= link_to edit_topic_path(topic.id), class:"title-name" do %>
+                <%= topic.title_name %>
+              <% end %>
+            <% else %>
+              <%= topic.title_name %>
+            <% end %>
+              <span><%= image_tag('arrow1.png', class:"arrow-tag") %></span>
           </li>
+
         <% end %>
 
       </ul>
-    </div>
 
-    <%= image_tag("logo5.jpg", class:"right-pic") %>
-  </div>
+      <!--Createフォーム-->
+      <div class="under-bar"></div>
 
-  <!--TOPIC-->
-  <div class="under-bar"></div>
-  <div>
-    <h1 class="topic-main", id="lists">HEADING</h1>
-  </div>
+      <div class="sends", id="send">
+        <h3 class="send-message">新しいHEADINGの作成</h3>
 
-  <!--TOPICリスト-->
-  <div class="topic-lists">
-    
-    <ul class="topic-titles", id="list">
+            <%= form_with(model: @topic, local: true, id: "form") do |topic| %>
 
-      <% @topics.each do |topic| %>
-
-        <li class="topic-title">
-          <% if user_signed_in? && current_user.id == topic.user_id %>
-            <%= link_to edit_topic_path(topic.id), class:"title-name" do %>
-              <%= topic.title_name %>
-            <% end %>
-          <% else %>
-            <%= topic.title_name %>
-          <% end %>
-            <span><%= image_tag('arrow1.png', class:"arrow-tag") %></span>
-        </li>
-
-      <% end %>
-
-    </ul>
-
-    <!--Createフォーム-->
-    <div class="under-bar"></div>
-
-    <div class="sends", id="send">
-      <h3 class="send-message">新しいHEADINGの作成</h3>
-
-          <%= form_with(model: @topic, local: true, id: "form") do |topic| %>
-
-            <div class="error">
-              <%= render 'shared/error_messages', model: topic.object %>
-            </div>
-
-            <div class="send-forms">
-              <div>
-                <%= topic.text_field :title_name,class:"send-form" %>
-                <%= topic.submit "作成", class: "send-btn", id: "submit" %>
+              <div class="error">
+                <%= render 'shared/error_messages', model: topic.object %>
               </div>
-            </div>
 
-          <% end %>
+              <div class="send-forms">
+                <div>
+                  <%= topic.text_field :title_name,class:"send-form" %>
+                  <%= topic.submit "作成", class: "send-btn", id: "submit" %>
+                </div>
+              </div>
+
+            <% end %>
+      </div>
+
+    </div>
+  
+  <% else %>
+
+    <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
+    <div class='title-contents'>
+      <h2 class='service-title'>
+        よりシンプルに、よりわかりやすく
+      </h2>
+      <p class='service-explain'>
+        Contact Noteは情報のストックをシンプルに行う
+      </p>
+      <p class='service-explain'>
+        情報共有アプリケーションです
+      </p>
     </div>
 
-  </div>
+    <div class="title-unders">
+      <div class="title-under">早速Contact Noteを始めましょう!</div>
+    </div>
+    <ul class="login-form">
+      <li><%= link_to '新規登録', new_user_registration_path, class: "logout login" %></li>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "logout" %></li>
+    </ul>
+    
+      <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+
+
+  <% end %>
 </div>
