@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
 
   def index
-    @topics = Topic.all
+    @topics = Topic.includes(:user)
     @topic = Topic.new
   end
 
