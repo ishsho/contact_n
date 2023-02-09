@@ -60,7 +60,7 @@ ___
 </br>
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/134312440084ed9299ce800c3daabdf3.png)](https://gyazo.com/134312440084ed9299ce800c3daabdf3)
+[![Image from Gyazo](https://i.gyazo.com/73b66506372832e2adb428dd34f9de93.png)](https://gyazo.com/73b66506372832e2adb428dd34f9de93)
 </br>
 </br>
 

@@ -23,9 +23,10 @@
 
             <% if user_signed_in? %>
               <li><%= link_to 'Chat', '#', class:"chat" %></li>
-              <li><%= link_to "ログアウト", '#', method: :delete, class:"logout" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %></li>
             <% else %>
-              <li><%= link_to 'ログイン', new_user_registration_path, class: "logout" %></li>
+              <li><%= link_to 'ログイン', new_user_session_path, class: "logout" %></li>
+              <li><%= link_to '新規登録', new_user_registration_path, class: "logout login" %></li>
             <% end %>
 
           </ul>
@@ -38,16 +39,13 @@
     <%= yield %>
 
     <footer class="footer">
-  
           <div class="footer-main">
 
             <div class="footer-logo">
               <%= link_to image_tag("logo10.jpg", class:"logo-icon"), "/" %>
             </div>
 
-          </div>
-        </div>
-  
+          </div>  
     </footer>
 
   </body>
