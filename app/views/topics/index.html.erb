@@ -45,14 +45,26 @@
         <% @topics.each do |topic| %>
 
           <li class="topic-title">
-            <% if user_signed_in? && current_user.id == topic.user_id %>
-              <%= link_to edit_topic_path(topic.id), class:"title-name" do %>
+            
+            <div class="menu">
+              <% if user_signed_in? && current_user.id == topic.user_id %>
+                <%= link_to edit_topic_path(topic.id), class:"title-name" do %>
+                  <%= topic.title_name %>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">メニュー</a>
+                    </li>
+                    <li>
+                      <a href="#">メニュー</a>
+                    </li>
+                  </ul>
+                <% end %>
+              <% else %>
                 <%= topic.title_name %>
               <% end %>
-            <% else %>
-              <%= topic.title_name %>
-            <% end %>
-              <span><%= image_tag('arrow1.png', class:"arrow-tag") %></span>
+
+              <!-- <div class="pull"><%= image_tag('arrow1.png', class:"arrow-tag") %></div> -->
+            </div>  
           </li>
 
         <% end %>
@@ -85,7 +97,7 @@
   
   <% else %>
 
-    <%# 画面上部の「人生を変えるフリマアプリ」帯部分 %>
+    <%# 画面上部の帯部分 %>
     <div class='title-contents'>
       <h2 class='service-title'>
         よりシンプルに、よりわかりやすく
@@ -107,7 +119,7 @@
       <li><%= link_to 'ログイン', new_user_session_path, class: "login-under" %></li>
     </ul>
     
-      <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
+      <%# /画面上部の帯部分  %>
 
 
   <% end %>
