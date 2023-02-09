@@ -45,17 +45,22 @@
         <% @topics.each do |topic| %>
 
           <li class="topic-title">
-            
+
             <div class="menu">
               <% if user_signed_in? && current_user.id == topic.user_id %>
                 <%= link_to edit_topic_path(topic.id), class:"title-name" do %>
                   <%= topic.title_name %>
-                  <ul class="sub-menu">
-                    <li>
+                  <ul class="dropdown__lists">
+                    <li class="dropdown__list">
                       <a href="#">メニュー</a>
                     </li>
-                    <li>
+                    <li class="dropdown__list">
                       <a href="#">メニュー</a>
+                    </li>
+                    <li class="dropdown__content">
+                      <%= link_to new_topic_content_path(topic.id), class:"content-plus" do %>
+                      コンテンツの追加
+                      <% end %>
                     </li>
                   </ul>
                 <% end %>
@@ -64,7 +69,8 @@
               <% end %>
 
               <!-- <div class="pull"><%= image_tag('arrow1.png', class:"arrow-tag") %></div> -->
-            </div>  
+            </div> 
+
           </li>
 
         <% end %>
