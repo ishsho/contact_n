@@ -114,6 +114,8 @@ ___
 |-----------------------|------------|--------------------------------|
 | content_title         | string     | null: false                    |
 | topic                 | references | null: false, foreign_key: true |
+| user                  | references | null: false, foreign_key: true |
+
 
 ### Association
 
