@@ -1,21 +1,22 @@
 class ContentsController < ApplicationController
 
   def new
-    @contents = Content.all
+    @content = Content.new
+    @topic = Topic.find(params[:topic_id])
   end
 
   def create
-    @content = Content.new(topic_params)
+    @content = Content.new(content_params)
     if @content.save
       redirect_to root_path(anchor: 'lists')
     else
-      render :index
+      render :new
     end
   end
   
   private
 
-  def topic_params
+  def content_params
     params.require(:content).permit(:title, :text).merge(user_id: current_user.id, topic_id: params[:topic_id])
   end
 

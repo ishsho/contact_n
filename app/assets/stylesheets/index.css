@@ -425,7 +425,7 @@ editページ
 }
 
 .dropdown__list {
-  background-color: rgb(240, 240, 228);
+  background-color: rgb(73, 73, 54);
   height: 60px;
   transition: all .3s;
   position: relative;
@@ -446,7 +446,7 @@ editページ
 } */
 
 .dropdown__list:hover {
-  background-color: rgb(210, 210, 199);
+  background-color: rgb(43, 43, 34);
 }
 
 .dropdown__list a {
@@ -454,7 +454,7 @@ editページ
   align-items: center;
   text-decoration: none;
   position: relative;
-  color: black;
+  color: white;
 }
 
 .dropdown__content {
