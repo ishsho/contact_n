@@ -336,5 +336,74 @@ editページ
 
 .login-form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.login-under,.new-under {
+  text-decoration: none;
+  color: black;
+}
+
+.new-under {
+  font-size: 30px;
+  border: 2px solid #ff701e;
+  border-radius: 5px;
+  padding: 10px 30px;
+  transition: all 0.5s;
+  color: white;
+  background-color: #ff701e;
+}
+
+.new-under:hover {
+  letter-spacing: 0.25em;
+  background: #fff;
+  color: #ff701e;
+}
+
+
+
+.login-under {
+  font-size: 20px;
+  padding-bottom: 5px;
+  position: relative;
+  transition: all 0.5s;
+}
+.login-under::before {
+  background: black;
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+  
+}
+.login-under:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.login-under:hover {
+  letter-spacing: 0.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.guid {
+  margin: 70px 0 10px;
 }

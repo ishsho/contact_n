@@ -102,8 +102,9 @@
       <div class="title-under">早速Contact Noteを始めましょう!</div>
     </div>
     <ul class="login-form">
-      <li><%= link_to '新規登録', new_user_registration_path, class: "logout login" %></li>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "logout" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "new-under" %></li>
+      <p class="guid">既にアカウントをお持ちの方はこちらから</p>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login-under" %></li>
     </ul>
     
       <%# /画面上部の「人生を変えるフリマアプリ」帯部分  %>
