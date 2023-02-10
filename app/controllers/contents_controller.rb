@@ -6,6 +6,7 @@ class ContentsController < ApplicationController
   end
 
   def create
+    @topic = Topic.find(params[:topic_id])
     @content = Content.new(content_params)
     if @content.save
       redirect_to root_path(anchor: 'lists')

@@ -3,7 +3,7 @@
   <div class="container">
     <div class="titles-name">
       <div class="heading-title-name">
-        「各HEADING名」
+        <%= @topic.title_name %>
       </div>
     </div>
 
@@ -15,13 +15,13 @@
           <h2 class="title-guid">コンテンツタイトルの記入</h2>
 
           <div class="title">
-            <%= form.text_field :title, class: "title-form", rows: "1" %>
+            <%= form.text_field :title, class: "title-form", placeholder:'記入してください', rows: "1" %>
           </div>
 
           <h2 class="title-guid">コンテンツの記入</h2>
 
           <div class="text">
-            <%= form.text_area :text, class:"text-form", rows: "15" %>
+            <%= form.text_area :text, class:"text-form", placeholder:'記入してください', rows: "15" %>
           </div>
 
           <div class="send-btn">
