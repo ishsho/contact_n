@@ -1,0 +1,21 @@
+
+.bers {
+  display: flex;
+  justify-content: center;
+}
+
+.content-ber {
+  width: 70vw;
+  border-bottom: 1px solid black;
+  margin: 0 0 20px 0;
+}
+
+.mains {
+}
+.content-main {
+  width: 70vw;
+  margin: 0 auto ;
+}
+
+
+

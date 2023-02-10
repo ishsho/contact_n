@@ -52,10 +52,13 @@
                   <%= topic.title_name %>
                   <ul class="dropdown__lists">
 
-                    <% @content.each do |c| %>
+                    <% topic.contents.each do |c| %>
+                      <%= link_to topic_contents_path(c.id), class:"content-link" do %>
+
                       <li class="dropdown__list">
-                        <%= topic.c.title %>
+                        <%= c.title %>
                       </li>
+                      <% end %>
                     <% end %>
 
                     <li class="dropdown__content">
