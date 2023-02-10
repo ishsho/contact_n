@@ -1,5 +1,9 @@
 class ContentsController < ApplicationController
 
+  def index
+    
+  end
+
   def new
     @content = Content.new
     @topic = Topic.find(params[:topic_id])

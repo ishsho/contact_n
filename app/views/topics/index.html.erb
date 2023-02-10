@@ -51,17 +51,19 @@
                 <%= link_to edit_topic_path(topic.id), class:"title-name" do %>
                   <%= topic.title_name %>
                   <ul class="dropdown__lists">
-                    <li class="dropdown__list">
-                      <a href="#">メニュー</a>
-                    </li>
-                    <li class="dropdown__list">
-                      <a href="#">メニュー</a>
-                    </li>
+
+                    <% @content.each do |c| %>
+                      <li class="dropdown__list">
+                        <%= topic.c.title %>
+                      </li>
+                    <% end %>
+
                     <li class="dropdown__content">
                       <%= link_to new_topic_content_path(topic.id), class:"content-plus" do %>
                       コンテンツの追加
                       <% end %>
                     </li>
+
                   </ul>
                 <% end %>
               <% else %>

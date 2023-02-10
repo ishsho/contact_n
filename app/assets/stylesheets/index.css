@@ -433,6 +433,7 @@ editページ
   border: 1px solid black;
   margin-bottom: 0.5px;
   border-radius: 5px;
+  color: white;
 }
 
 /* .dropdown__list:not(:first-child)::before{

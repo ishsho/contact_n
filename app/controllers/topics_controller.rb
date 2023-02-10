@@ -4,6 +4,7 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.includes(:user)
     @topic = Topic.new
+    @content = Content.includes(:user, :topic)
   end
 
   def create
