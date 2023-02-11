@@ -2,7 +2,6 @@ class ContentsController < ApplicationController
 
   def index
     @content = Content.find(params[:topic_id])
-    @topics = Topic.includes(:user)
   end
 
   def new
@@ -21,8 +20,10 @@ class ContentsController < ApplicationController
   end
 
   def edit
-    @content = Content.find(params[:topic_id])
     @topic = Topic.find(params[:topic_id])
+  end
+
+  def update
   end
   
   private
