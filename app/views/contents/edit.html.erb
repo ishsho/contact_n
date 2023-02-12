@@ -1,1 +1,8 @@
 <div>編集</div>
+
+<%= form_with(model: [@topic,@content], local: true) do |c| %>
+  <%= c.text_field :title,class:"send-form" %>
+  <%= c.text_field :text,class:"send-form" %>
+  <%= c.submit "編集", class: "send-btn", id: "submit" %>
+  <%= link_to "削除", topic_content_path, method: :delete, class:"topic-destroy" %>
+<% end %>

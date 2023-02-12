@@ -20,10 +20,19 @@ class ContentsController < ApplicationController
   end
 
   def edit
+    @content = Content.find(params[:id])
     @topic = Topic.find(params[:topic_id])
   end
 
   def update
+    @content = Content.find(params[:id])
+    @content.update(content_params)
+  end
+
+  def destroy
+    @content = Content.find(params[:id])
+    @content.destroy
+    redirect_to root_path(anchor: 'lists')
   end
   
   private
