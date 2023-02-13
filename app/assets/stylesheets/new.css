@@ -60,13 +60,17 @@
   color: white;
   padding: 11px 100px;
   border-radius: 7px;
-  font-size: 25px;
+  font-size: 23px;
   transition: all .5s;
+  display: block;
+  height: 60px;
 }
 
 .send-btn:hover {
   background-color: #fff;
   color: #a2a2a2;
+  letter-spacing: 0.25em;
+  transform: scale(1.05);
 }
 
 .ber {
@@ -78,4 +82,21 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+}
+
+/*************************************************************************
+editページ
+*************************************************************************/
+
+.sends {
+  padding-top: 11px;
+  height: 500px;
+}
+
+.text-edit {
+  padding-bottom: 20px;
+}
+
+.send-bt {
+  margin-bottom: 50px;
 }

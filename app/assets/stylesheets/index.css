@@ -53,6 +53,8 @@
 }
 
 
+
+
 /*************************************************************************
 検索フォーム
 *************************************************************************/
@@ -78,6 +80,10 @@
 .search-icon {
   height: 28px;
   cursor: pointer;
+}
+
+.search-btn:hover {
+  transform: translateY(-5px);
 }
 
 
@@ -219,19 +225,22 @@ TOPICリスト
 }
 
 .send-form {
-  width: 700px;
-  height: 40px;
+  width: 55vw;
+  height: 50px;
   padding-left: 10px;
   font-size: 20px;
+  border: 1px solid #767676;
+  border-radius: 10px;
 }
 
 .send-btn-top {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .send-btn {
-  height: 40px;
-  width: 100px;
   cursor: pointer;
 }
 
