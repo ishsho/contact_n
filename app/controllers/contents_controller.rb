@@ -26,7 +26,9 @@ class ContentsController < ApplicationController
 
   def update
     @content = Content.find(params[:id])
-    @content.update(content_params)
+    if @content.update(content_params)
+      redirect_to topic_contents_path(@content.id)
+    end
   end
 
   def destroy

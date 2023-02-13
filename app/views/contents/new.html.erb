@@ -15,17 +15,21 @@
           <h2 class="title-guid">コンテンツタイトルの記入</h2>
 
           <div class="title">
-            <%= form.text_field :title, class: "title-form", placeholder:'記入してください', rows: "1" %>
+            <%= form.text_field :title, class: "send-form", placeholder:'記入してください', rows: "1" %>
           </div>
 
           <h2 class="title-guid">コンテンツの記入</h2>
 
-          <div class="text">
-            <%= form.text_area :text, class:"text-form", placeholder:'記入してください' %>
+          <div class="text-edit">
+            <%= form.text_area :text, class:"send-form send-f", placeholder:'記入してください' %>
           </div>
 
-          <div class="send-btn">
-            <%= form.submit "作成", class:"content-send" %>
+          <div class="sends-btn">
+            <%= form.submit "作成", class:"send-btn" %>
+          </div>
+
+          <div class="sends-btns">
+              <%= link_to "戻る", "/", class: "send-btn" %>
           </div>
 
        </div>

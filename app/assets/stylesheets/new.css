@@ -84,6 +84,26 @@
   margin-top: 50px;
 }
 
+.send-btns {
+  background-color: #a2a2a2;
+  border: 1px solid #a2a2a2;
+  text-decoration: none;
+  color: white;
+  padding: 11px 56px;
+  border-radius: 7px;
+  font-size: 23px;
+  transition: all .5s;
+  display: block;
+  height: 60px;
+}
+
+.send-btns:hover {
+  background-color: #fff;
+  color: #a2a2a2;
+  letter-spacing: 0.25em;
+  transform: scale(1.05);
+}
+
 /*************************************************************************
 editページ
 *************************************************************************/
@@ -95,8 +115,13 @@ editページ
 
 .text-edit {
   padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .send-bt {
   margin-bottom: 50px;
+}
+
+.send-f {
+  height: 500px;
 }

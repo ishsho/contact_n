@@ -3,13 +3,19 @@
     <h3 class="edit">編集または削除</h3>
       <%= form_with(model: @topic, local: true) do |topic| %>
 
-        <div class="send-forms">
-          <div>
+       <div class="contents">
+
+          <div class="title-edit edits">
             <%= topic.text_field :title_name,class:"send-form" %>
-            <%= topic.submit "編集", class: "send-btn", id: "submit" %>
-            <%= link_to "削除", topic_path, method: :delete, class:"topic-destroy" %>
           </div>
-        </div>
+
+          <div class="text-edit">
+            <%= topic.submit "編集", class: "send-btn", id: "submit" %>
+          </div>
+
+            <%= link_to "削除", topic_path, method: :delete, class:"send-btn" %>
+            <h1>※HEADING内に保存してある各コンテンツも消去されるのでご注意ください。</h1>
+       </div>
 
       <% end %>
       <div class="edit-under"></div>

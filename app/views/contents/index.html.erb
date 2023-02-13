@@ -12,7 +12,7 @@
   
   <div class="mains">
     <div class="content-main">
-      <%= @content.text %>
+      <%= safe_join(@content.text.split("\n"),tag(:br)) %>
     </div>
   </div>
 
@@ -21,15 +21,11 @@
   </div>
 
   <div class="sends-btn">
-    <div>
-      <%= link_to "編集", edit_topic_content_path(@content.topic_id,@content.id), class: "send-btn" %>
-    </div>
+      <%= link_to "編集ページへ", edit_topic_content_path(@content.topic_id,@content.id), class: "send-btns" %>
   </div>
 
   <div class="sends-btns">
-    <div>
       <%= link_to "戻る", "/", class: "send-btn" %>
-    </div>
   </div>
 
 </div>

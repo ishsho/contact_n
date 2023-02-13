@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:edit, :update, :destroy]
 
   def index
-    @topics = Topic.includes(:user)
+    @topics = Topic.includes(:user).order(:title_name)
     @topic = Topic.new
   end
 

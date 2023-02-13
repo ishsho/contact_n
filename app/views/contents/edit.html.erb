@@ -11,14 +11,16 @@
           <%= c.text_field :title,class:"send-form" %>
         </div>
         
-
         <div class="text-edit">
           <%= c.text_area :text, class:"send-form sends" , rows: "15" %>
         </div>
+
         <div class="send-bt">
           <%= c.submit "編集", class: "send-btn", id: "submit" %>
         </div>
+
           <%= link_to "削除", topic_content_path, method: :delete, class:"send-btn" %>
+          
       </div>
 
     <% end %>
