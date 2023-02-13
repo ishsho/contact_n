@@ -1,5 +1,5 @@
 <div class="main-content">
-   
+
   <div class="titles-name">
     <div class="heading-title-name">
       <%= @content.title %>
@@ -16,8 +16,20 @@
     </div>
   </div>
 
-  <div>
-    <%= link_to "編集", edit_topic_content_path(@content.topic_id,@content.id), class: "send-btn" %>
+  <div class="bers">
+    <div class="content-ber ber"></div>
+  </div>
+
+  <div class="sends-btn">
+    <div>
+      <%= link_to "編集", edit_topic_content_path(@content.topic_id,@content.id), class: "send-btn" %>
+    </div>
+  </div>
+
+  <div class="sends-btns">
+    <div>
+      <%= link_to "戻る", "/", class: "send-btn" %>
+    </div>
   </div>
 
 </div>

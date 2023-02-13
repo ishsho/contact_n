@@ -3,6 +3,6 @@ class Topic < ApplicationRecord
   validates :title_name,   presence: true
 
   belongs_to :user
-  has_many :contents
+  has_many :contents, dependent: :destroy
 
 end

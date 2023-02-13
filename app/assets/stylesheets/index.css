@@ -225,6 +225,10 @@ TOPICリスト
   font-size: 20px;
 }
 
+.send-btn-top {
+  display: flex;
+}
+
 .send-btn {
   height: 40px;
   width: 100px;

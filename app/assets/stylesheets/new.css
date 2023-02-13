@@ -43,5 +43,39 @@
   font-size: 20px;
 }
 
+.content-main {
+  margin-bottom: 300px;
+}
 
+.sends-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.send-btn {
+  background-color: #a2a2a2;
+  border: 1px solid #a2a2a2;
+  text-decoration: none;
+  color: white;
+  padding: 11px 100px;
+  border-radius: 7px;
+  font-size: 25px;
+  transition: all .5s;
+}
+
+.send-btn:hover {
+  background-color: #fff;
+  color: #a2a2a2;
+}
+
+.ber {
+  margin-bottom: 50px;
+}
+
+.sends-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}

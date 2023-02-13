@@ -95,12 +95,17 @@
               </div>
 
               <div class="send-forms">
+                  <div>
+                    <%= topic.text_field :title_name,class:"send-form", placeholder:'記入してください' %>
+                  </div>
+              </div>
+
+              <div class="send-btn-top">
                 <div>
-                  <%= topic.text_field :title_name,class:"send-form", placeholder:'記入してください' %>
                   <%= topic.submit "作成", class: "send-btn", id: "submit" %>
                 </div>
               </div>
-
+              
             <% end %>
       </div>
 
