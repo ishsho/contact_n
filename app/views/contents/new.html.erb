@@ -1,0 +1,36 @@
+<div class="main-content">
+
+  <div class="container">
+    <div class="titles-name">
+      <div class="heading-title-name">
+        <%= @topic.title_name %>
+      </div>
+    </div>
+
+    <div class="under-bar"></div>
+
+      <%= form_with(model: [@topic,@content], url:topic_contents_path, local: true) do |form| %>
+       <div class="contents">
+
+          <h2 class="title-guid">コンテンツタイトルの記入</h2>
+
+          <div class="title">
+            <%= form.text_field :title, class: "title-form", placeholder:'記入してください', rows: "1" %>
+          </div>
+
+          <h2 class="title-guid">コンテンツの記入</h2>
+
+          <div class="text">
+            <%= form.text_area :text, class:"text-form", placeholder:'記入してください', rows: "15" %>
+          </div>
+
+          <div class="send-btn">
+            <%= form.submit "作成", class:"content-send" %>
+          </div>
+
+       </div>
+      <% end %>
+  </div>
+  
+  
+</div>

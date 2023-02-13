@@ -1,0 +1,81 @@
+.main-content {
+  margin: 40px 0;
+}
+
+.titles-name {
+  display: flex;
+  justify-content: center;
+}
+
+.heading-title-name {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.title-guid {
+  margin: 40px 0 20px;
+  font-size: 20px;
+  border-bottom: 1px solid red;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title-form, .text-form  {
+  width: 45vw;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.content-send {
+  margin: 20px 0 0 0;
+  width: 400px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  left: calc(50% - 200px);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.content-main {
+  margin-bottom: 300px;
+}
+
+.sends-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.send-btn {
+  background-color: #a2a2a2;
+  border: 1px solid #a2a2a2;
+  text-decoration: none;
+  color: white;
+  padding: 11px 100px;
+  border-radius: 7px;
+  font-size: 25px;
+  transition: all .5s;
+}
+
+.send-btn:hover {
+  background-color: #fff;
+  color: #a2a2a2;
+}
+
+.ber {
+  margin-bottom: 50px;
+}
+
+.sends-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}

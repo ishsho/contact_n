@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  before_action :set_topic, only: [:edit, :update, :destroy]
 
   def index
     @topics = Topic.includes(:user)
@@ -16,11 +17,9 @@ class TopicsController < ApplicationController
   end
 
   def edit
-    @topic = Topic.find(params[:id])
   end
 
   def update
-    @topic = Topic.find(params[:id])
     if @topic.update(topic_params)
       redirect_to root_path(anchor: 'lists')
     else
@@ -29,7 +28,6 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(params[:id])
     @topic.destroy
     redirect_to root_path(anchor: 'lists')
   end
@@ -39,6 +37,10 @@ class TopicsController < ApplicationController
 
   def topic_params
     params.require(:topic).permit(:title_name).merge(user_id: current_user.id)
+  end
+
+  def set_topic
+    @topic = Topic.find(params[:id])
   end
 
 end
