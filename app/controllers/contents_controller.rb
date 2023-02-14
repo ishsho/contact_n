@@ -1,16 +1,16 @@
 class ContentsController < ApplicationController
-  
+  before_action :set_content, only: [:new, :create, :edit]
+  before_action :set_contents, only: [:edit, :update, :destroy]
+
   def index
     @content = Content.find(params[:topic_id])
   end
 
   def new
     @content = Content.new
-    @topic = Topic.find(params[:topic_id])
   end
 
   def create
-    @topic = Topic.find(params[:topic_id])
     @content = Content.new(content_params)
     if @content.save
       redirect_to root_path(anchor: 'lists')
@@ -20,19 +20,15 @@ class ContentsController < ApplicationController
   end
 
   def edit
-    @content = Content.find(params[:id])
-    @topic = Topic.find(params[:topic_id])
   end
 
   def update
-    @content = Content.find(params[:id])
     return unless @content.update(content_params)
 
     redirect_to topic_contents_path(@content.id)
   end
 
   def destroy
-    @content = Content.find(params[:id])
     @content.destroy
     redirect_to root_path(anchor: 'lists')
   end
@@ -41,5 +37,13 @@ class ContentsController < ApplicationController
 
   def content_params
     params.require(:content).permit(:title, :text, :image).merge(user_id: current_user.id, topic_id: params[:topic_id])
+  end
+
+  def set_content
+    @topic = Topic.find(params[:topic_id])
+  end
+
+  def set_contents
+    @content = Content.find(params[:id])
   end
 end
