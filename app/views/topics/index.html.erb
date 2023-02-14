@@ -18,14 +18,27 @@
       <div class="new-topic">
         <h2 class="heading-name">新着情報</h2>
 
-        <ul class="messages">
-          <% @topics.each do |f| %>
-            <li class="message">
-              <div><%= f.title_name %></div>
-            </li>
+        <div class="messages">
+          <% @content.each do |c| %>
+           <div class="message-box">
+
+              <div>
+                <%= c.created_at.to_s(:datetime_jp) %>
+              </div>
+
+              <div class="message">
+                <div>
+                <%= link_to topic_contents_path(c.id),class:"t-title" do %>
+                  <%= c.title  %>
+                </div>
+                <div> （<%= c.topic.title_name %>）</div>
+                <% end %>
+              </div>
+
+           </div> 
           <% end %>
 
-        </ul>
+          </div>
       </div>
 
       <%= image_tag("logo5.jpg", class:"right-pic") %>
@@ -54,10 +67,9 @@
 
                     <% topic.contents.each do |c| %>
                       <%= link_to topic_contents_path(c.id), class:"content-link" do %>
-
-                      <li class="dropdown__list">
-                        <%= c.title %>
-                      </li>
+                        <li class="dropdown__list">
+                          <%= c.title %>
+                        </li>
                       <% end %>
                     <% end %>
 
