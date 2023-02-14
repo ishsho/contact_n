@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+  
   def index
     @content = Content.find(params[:topic_id])
   end
@@ -39,6 +40,6 @@ class ContentsController < ApplicationController
   private
 
   def content_params
-    params.require(:content).permit(:title, :text).merge(user_id: current_user.id, topic_id: params[:topic_id])
+    params.require(:content).permit(:title, :text, :image).merge(user_id: current_user.id, topic_id: params[:topic_id])
   end
 end

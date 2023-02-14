@@ -63,3 +63,6 @@ gem 'pry-rails'
 gem "net-http"
 
 gem 'devise'
+
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
