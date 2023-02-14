@@ -110,7 +110,7 @@ editページ
 
 .sends {
   padding-top: 11px;
-  height: 500px;
+  height: 100%;
 }
 
 .text-edit {
@@ -123,6 +123,6 @@ editページ
 }
 
 .send-f {
-  height: 82px;
   resize: none;
+  height: 100%;
 }
