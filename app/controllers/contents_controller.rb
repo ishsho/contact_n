@@ -1,5 +1,4 @@
 class ContentsController < ApplicationController
-
   def index
     @content = Content.find(params[:topic_id])
   end
@@ -26,9 +25,9 @@ class ContentsController < ApplicationController
 
   def update
     @content = Content.find(params[:id])
-    if @content.update(content_params)
-      redirect_to topic_contents_path(@content.id)
-    end
+    return unless @content.update(content_params)
+
+    redirect_to topic_contents_path(@content.id)
   end
 
   def destroy
@@ -36,11 +35,10 @@ class ContentsController < ApplicationController
     @content.destroy
     redirect_to root_path(anchor: 'lists')
   end
-  
+
   private
 
   def content_params
     params.require(:content).permit(:title, :text).merge(user_id: current_user.id, topic_id: params[:topic_id])
   end
-
 end

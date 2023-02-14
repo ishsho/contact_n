@@ -32,7 +32,6 @@ class TopicsController < ApplicationController
     redirect_to root_path(anchor: 'lists')
   end
 
-
   private
 
   def topic_params
@@ -42,5 +41,4 @@ class TopicsController < ApplicationController
   def set_topic
     @topic = Topic.find(params[:id])
   end
-
 end

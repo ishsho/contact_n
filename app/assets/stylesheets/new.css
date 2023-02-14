@@ -123,5 +123,6 @@ editページ
 }
 
 .send-f {
-  height: 500px;
+  height: 82px;
+  resize: none;
 }
