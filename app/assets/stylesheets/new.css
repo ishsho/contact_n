@@ -111,6 +111,7 @@ editページ
 .sends {
   padding-top: 11px;
   height: 100%;
+  resize: none;
 }
 
 .text-edit {
