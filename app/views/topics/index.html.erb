@@ -13,7 +13,21 @@
     <!--新着情報-->
     <div class="under-bar"></div>
     <div class="new-topics">
-      <%= image_tag("logo5.jpg", class:"left-pic") %>
+      <%= image_tag("logo10.jpg", class:"left-pic",id:"mypic",onclick:"slideshow()") %>
+      <script>
+        var pics_src = new Array("logo10.jpg","logo6.jpg","logo5.jpg");
+        var num = 0;
+
+        function slideshow(){
+            if (num == 2) {
+                num = 0;
+            }
+            else {
+                num ++;
+            }
+            document.getElementById("mypic").src=pics_src[num];
+        }
+      </script>
       
       <div class="new-topic">
         <h2 class="heading-name">新着情報</h2>
@@ -31,7 +45,7 @@
                 <%= link_to topic_contents_path(c.id),class:"t-title" do %>
                   <%= c.title  %>
                 </div>
-                <div> （<%= c.topic.title_name %>）</div>
+                <div> （ <%= c.topic.title_name %> ）</div>
                 <% end %>
               </div>
 

@@ -3,7 +3,7 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.includes(:user).order(:title_name)
-    @content = Content.includes(:user, :topic).order(:updated_at)
+    @content = Content.includes(:user, :topic).order("updated_at DESC")
     @topic = Topic.new
   end
 
