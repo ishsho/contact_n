@@ -24,7 +24,6 @@ class ContentsController < ApplicationController
 
   def update
     return unless @content.update(content_params)
-
     redirect_to topic_contents_path(@content.id)
   end
 
