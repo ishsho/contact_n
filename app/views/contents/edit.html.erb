@@ -14,6 +14,10 @@
         <div class="text-edit">
           <%= c.text_area :text, class:"send-form sends" , rows: "15" %>
         </div>
+        
+        <div class="text-edit"> 
+          <%= c.file_field :image, class: "pic-btn" %>
+        </div>
 
         <div class="send-bt">
           <%= c.submit "編集", class: "send-btn", id: "submit" %>

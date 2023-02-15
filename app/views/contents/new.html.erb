@@ -24,10 +24,9 @@
             <%= form.text_area :text, class:"send-form send-f", placeholder:'記入してください',rows:"15" %>
           </div>
 
-          <label class="form-image">
-            <span class="image-file">画像</span>
-            <%= form.file_field :image, class: 'hidden' %>
-          </label>
+          <div class="text-edit"> 
+            <%= form.file_field :image, class: "pic-btn" %>
+          </div>
 
           <div class="sends-btn">
             <%= form.submit "作成", class:"send-btn" %>

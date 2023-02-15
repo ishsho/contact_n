@@ -14,9 +14,12 @@
     <div class="content-main">
       <%= safe_join(@content.text.split("\n"),tag(:br)) %>
     </div>
+    <div class="pic">
+      <%= image_tag @content.image.variant(resize: '700x700'), class: 'message-image' if @content.image.attached? %>
+    </div>
   </div>
 
-  <%= image_tag @content.image, class: 'message-image' if @content.image.attached? %>
+  
 
   <div class="bers">
     <div class="content-ber ber"></div>

@@ -1,5 +1,5 @@
 .main-content {
-  margin: 40px 0;
+  margin: 40px 15vw;
 }
 
 .titles-name {
@@ -17,7 +17,9 @@
   font-size: 20px;
   border-bottom: 1px solid red;
 }
-
+.pic {
+  margin-bottom: 50px;
+}
 .contents {
   display: flex;
   flex-direction: column;
@@ -44,7 +46,7 @@
 }
 
 .content-main {
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 
 .sends-btn {
@@ -104,18 +106,19 @@
   transform: scale(1.05);
 }
 
-.form-image {
-  font-size: 12px;
-  background-color: lightblue;
+.pic-btn {
+  background-color: #a2a2a2;
+  border: 1px solid #a2a2a2;
+  text-decoration: none;
   color: white;
-  padding: 12px;
-  width: 60px;
-  margin: 5px 10px;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
+  width: 300px;
+  padding: 11px 0 11px 5px;
+  border-radius: 7px;
+  font-size: 17px;
+  transition: all .5s;
+  display: block;
+  height: 60px;
+  cursor: pointer;
 }
 
 /*************************************************************************
@@ -131,6 +134,7 @@ editページ
 .text-edit {
   padding-bottom: 20px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .send-bt {
