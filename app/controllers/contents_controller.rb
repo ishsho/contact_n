@@ -13,7 +13,7 @@ class ContentsController < ApplicationController
   def create
     @content = Content.new(content_params)
     if @content.save
-      redirect_to root_path(anchor: 'lists')
+      redirect_to topic_contents_path(@content.id)
     else
       render :new
     end
