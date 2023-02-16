@@ -13,19 +13,19 @@
     <!--新着情報-->
     <div class="under-bar"></div>
     <div class="new-topics">
-      <%= image_tag("desk2.png", class:"left-pic",id:"mypic",onclick:"slideshow()") %>
+      <%= image_tag("desk2.png", class:"left-pic",id:"mypic",onclick:"slideshow1()") %>
       <script>
-        var pics_src = new Array("desk2.png","usagi2.png","usagi3.png","usagi4.png");
+        var pics_srcs = new Array("desk2.png","usagi2.png","usagi3.png","usagi4.png");
         var num = 0;
 
-        function slideshow(){
+        function slideshow1(){
             if (num == 3) {
                 num = 0;
             }
             else {
                 num ++;
             }
-            document.getElementById("mypic").src=pics_src[num];
+            document.getElementById("mypic").src=pics_srcs[num];
         }
       </script>
       
@@ -55,7 +55,21 @@
           </div>
       </div>
 
-      <%= image_tag("logo5.jpg", class:"right-pic") %>
+      <%= image_tag("logo5.jpg", class:"right-pic", id:"mypics",onclick:"slideshow()") %>
+      <script>
+        var pics_src = new Array("logo5.jpg","logo6.jpg","logo.png","logo4.png");
+        var num = 0;
+
+        function slideshow(){
+            if (num == 3) {
+                num = 0;
+            }
+            else {
+                num ++;
+            }
+            document.getElementById("mypics").src=pics_src[num];
+        }
+      </script>
     </div>
 
     <!--TOPIC-->
