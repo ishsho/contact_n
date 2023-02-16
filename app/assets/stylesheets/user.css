@@ -70,8 +70,19 @@
   float: left;
   margin-top: 20px;
   color: #fff;
-  background-color: #38aef0;
+  background-color: #a2a2a2;
+  border: 1px solid #a2a2a2;
+  cursor: pointer;
+  transition: all .5s;
 }
+
+.account-page input[type=submit]:hover {
+  background-color: #fff;
+  color: #a2a2a2;
+  letter-spacing: 0.25em;
+  transform: scale(1.05);
+}
+
 .account-page .field-label .field_with_errors {
   display: inline-block;
   color: #d65f4c;
