@@ -128,7 +128,7 @@
       <div class="sends", id="send">
         <h3 class="send-message">新しいHEADINGの作成</h3>
 
-            <%= form_with(model: @topic, local: true, id: "form") do |topic| %>
+            <%= form_with(model: @topic, local: true, url: topics_path(anchor: 'form'),id: 'form') do |topic| %>
 
               <div class="error">
                 <%= render 'shared/error_messages', model: topic.object %>

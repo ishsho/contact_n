@@ -8,6 +8,7 @@ class TopicsController < ApplicationController
   end
 
   def create
+    @content = Content.includes(:user, :topic).order("updated_at DESC")
     @topics = Topic.all
     @topic = Topic.new(topic_params)
     if @topic.save
