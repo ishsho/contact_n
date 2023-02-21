@@ -1,5 +1,5 @@
 class Content < ApplicationRecord
-  validates :title,   presence: true
+  validates :title,   presence: true, length: { maximum: 25 }
   validates :text,    presence: true
 
   belongs_to :user
