@@ -11,6 +11,10 @@
 
       <%= form_with(model: [@topic,@content], url:topic_contents_path, local: true) do |form| %>
        <div class="contents">
+        
+          <div class="error">
+            <%= render 'shared/error_messages', model: form.object %>
+          </div>
 
           <h2 class="title-guid">コンテンツタイトルの記入</h2>
 

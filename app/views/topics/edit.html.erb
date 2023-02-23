@@ -4,6 +4,10 @@
       <%= form_with(model: @topic, local: true) do |topic| %>
 
        <div class="contents">
+        
+          <div class="error">
+            <%= render 'shared/error_messages', model: topic.object %>
+          </div>
 
           <div class="title-edit edits">
             <%= topic.text_field :title_name,class:"send-form" %>

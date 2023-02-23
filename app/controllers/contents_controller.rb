@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-  before_action :set_content, only: [:new, :create, :edit]
+  before_action :set_content, only: [:new, :create, :edit, :update]
   before_action :set_contents, only: [:edit, :update, :destroy]
 
   def index
@@ -23,9 +23,12 @@ class ContentsController < ApplicationController
   end
 
   def update
-    return unless @content.update(content_params)
-    redirect_to topic_contents_path(@content.id)
-  end
+    if @content.update(content_params)
+     redirect_to topic_contents_path(@content.id)
+    else
+      render :edit
+    end
+  end 
 
   def destroy
     @content.destroy
