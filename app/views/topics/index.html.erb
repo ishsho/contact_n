@@ -1,7 +1,7 @@
 <div class="main-body">
   <% if user_signed_in? %>
     <!--検索窓-->
-    <div class="form">
+    <div class="form_search">
       <form class="search-form" action="#">
         <input class='input-box' placeholder='キーワードから探す'>
         <button class="search-btn">
@@ -30,9 +30,9 @@
       </script>
       
       <div class="new-topic">
-        <h2 class="heading-name">新着情報</h2>
+        <h2 class="new-heading-name">新着情報</h2>
 
-        <div class="messages">
+        <div class="new_messages">
           <% @content.each do |c| %>
            <div class="message-box">
 
@@ -40,7 +40,7 @@
                 <%= c.updated_at.to_s(:datetime_jp) %>
               </div>
 
-              <div class="message">
+              <div class="new_message">
                 <div>
                 <%= link_to topic_contents_path(c.id),class:"t-title" do %>
                   <%= c.title  %>
@@ -75,7 +75,7 @@
     <!--TOPIC-->
     <div class="under-bar"></div>
     <div>
-      <h1 class="topic-main", id="lists">HEADING</h1>
+      <div class="topic-main", id="lists">HEADING</div>
     </div>
 
     <!--TOPICリスト-->
