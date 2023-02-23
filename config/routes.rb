@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :messages, only: [:index]
+
+  resources :rooms, only: [:new, :create]
 end
