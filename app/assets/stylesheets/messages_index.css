@@ -1,5 +1,6 @@
 .wrapper{
   display: flex;
+  margin: 20px 0 0 0;
 }
 
 /*******************************************************************
@@ -57,7 +58,7 @@
 *******************************************************************/
 
 
-.chat {
+.message-chat {
   width: calc(100vw - 300px);
   background-color: #ffffff;
 }
@@ -127,7 +128,7 @@
 
 /**********************************************/
 
-.form {
+.message-form{
   height: 90px;
   background-color: #dddddd;
   padding: 20px 40px;

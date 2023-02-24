@@ -5,6 +5,7 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.includes(:user).order(:title_name)
     @topic = Topic.new
+    @room = Room.find_by(params[:room_id])
   end
 
   def create
